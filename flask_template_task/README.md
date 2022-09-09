@@ -1,8 +1,5 @@
-# Sloovi Api
-# Setup
-This test project i
-```python
+# Flask Task Template
 
-```
+
 # Api Endpoints
 - 
