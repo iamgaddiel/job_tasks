@@ -44,7 +44,7 @@ def create_app(config=Config):
 
     resp = requests.post(
         "https://cloud.mongodb.com/api/atlas/v1.0/groups/{groupId}/accessList".format(groupId=atlas_group_id),
-        # auth=HTTPDigestAuth(atlas_api_public_key, atlas_api_private_key),
+        auth=HTTPDigestAuth(atlas_api_public_key, atlas_api_private_key),
         json={'ipAddress': ip, 'comment': 'From home'}
     )
 
