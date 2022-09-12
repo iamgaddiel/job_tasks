@@ -40,7 +40,7 @@ def create_app(config=Config):
     # alternative to receive external ip-adress: https://checkip.amazonaws.com, https://ident.me 
     # ip = requests.get('https://ident.me').text.strip()
 
-    print(ip)
+    print(ip, "<----------")
 
     resp = requests.post(
         "https://cloud.mongodb.com/api/atlas/v1.0/groups/{groupId}/accessList".format(groupId=atlas_group_id),
