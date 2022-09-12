@@ -29,7 +29,7 @@ def create_app(config=Config):
     atlas_group_id = app.config.get("ATLAS_GROUP_ID")
     atlas_api_public_key = app.config.get("ATLAS_PUBLIC_KEY")
     atlas_api_private_key = app.config.get("ATLAS_PRIVATE_KEY")
-    # ip = requests.get('https://api.ipify.org').text
+    ip = requests.get('https://api.ipify.org').text.strip()
     # print(ip, '<----------- Ip address')
 
     print(atlas_api_private_key)
@@ -38,7 +38,7 @@ def create_app(config=Config):
     print("Whitelisting...")
 
     # alternative to receive external ip-adress: https://checkip.amazonaws.com, https://ident.me 
-    ip = requests.get('https://ident.me').text.strip()
+    # ip = requests.get('https://ident.me').text.strip()
 
     print(ip)
 
