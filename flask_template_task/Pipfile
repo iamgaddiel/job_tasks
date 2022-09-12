@@ -12,6 +12,8 @@ flask-restful = "*"
 python-dotenv = "*"
 bcrypt = "*"
 flask-jwt-extended = "*"
+ipify = "*"
+requests = "*"
 
 [dev-packages]
 
