@@ -40,24 +40,24 @@ def create_app(config=Config):
     # alternative to receive external ip-adress: https://checkip.amazonaws.com, https://ident.me 
     # ip = requests.get('https://ident.me').text.strip()
 
-    print(ip, "<----------")
+    # print(ip, "<----------")
 
-    resp = requests.post(
-        "https://cloud.mongodb.com/api/atlas/v1.0/groups/{groupId}/accessList".format(groupId=atlas_group_id),
-        auth=HTTPDigestAuth(atlas_api_public_key, atlas_api_private_key),
-        json={'ipAddress': ip, 'comment': 'From home'}
-    )
+    # resp = requests.post(
+    #     "https://cloud.mongodb.com/api/atlas/v1.0/groups/{groupId}/accessList".format(groupId=atlas_group_id),
+    #     auth=HTTPDigestAuth(atlas_api_public_key, atlas_api_private_key),
+    #     json={'ipAddress': ip, 'comment': 'From home'}
+    # )
 
-    if resp.status_code in (200, 201):
-        print("MongoDB Atlas whitelist request successful", flush=True)
-    else:
-        print(
-            "MongoDB Atlas whitelist request problem: status code was {status_code}, content was {content}".format(
-                status_code=resp.status_code, content=resp.content
-            ),
+    # if resp.status_code in (200, 201):
+    #     print("MongoDB Atlas whitelist request successful", flush=True)
+    # else:
+    #     print(
+    #         "MongoDB Atlas whitelist request problem: status code was {status_code}, content was {content}".format(
+    #             status_code=resp.status_code, content=resp.content
+    #         ),
 
-            flush=True
-        )
+    #         flush=True
+    #     )
 
 
 
